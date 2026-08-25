@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+.hero{
+    background-image: url('images/bg.jpg');
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.herobg{
+    background-color: rgba(0,0,0,0.7);
+    /* min-width: 600px; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo>img{
+    width:160px;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+.btn{
+    border:none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.btn1{
+    border-radius: 5px;
+    background:transparent;
+    color:white;
+    font-size: 16px;
+    border: 1px solid grey;
+    
+}
+.btn1:focus{
+    border: 1.5px solid white;
+}
+.btn2{
+    font-size: 16px;
+    border-radius: 5px;
+    color:white;
+    background:#E50914;
+    font-weight: bold;
+
+}
+header{
+    position:absolute;
+    background:transparent;
+    width:100%;
+    top:0;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 7%;
+    padding-top: 10px;
+}
+.dropbox1{
+    position:relative;
+}
+.dropbox1:hover .lang-menu{
+    display:block;
+}
+.lang-menu{
+    width: 100%;
+    display:none;
+    position:absolute;
+    z-index: 10;
+}
+.lang-btn{
+    display:block;
+    background:white;
+    color:Black;
+    border:0.1px solid grey;
+    width:100%;
+    text-align:left ;
+    border-radius: 5px;
+}
+.lang-btn:hover{
+    background:#E50914;
+    color:white;
+}
+.hero-content{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    color:white;
+    /* margin-top: 110px; */
+}
+.hero-content h1{
+    font-size: 2.2em;
+}
+.hero-content p{
+    margin: 10px;
+    font-size: 14px;
+}
+.heroButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.heroButton input{
+    background:rgba(0, 0, 0, 0.5);
+    border: 1px solid grey;
+    padding: 15px 25px;
+    border-radius: 5px;
+    width: 60%;
+    /* font-weight: bold; */
+    font-size: 1.2em;
+    color:white;
+}
+.heroButton input::placeholder{
+    color:rgba(255, 255, 255, 0.6);
+}
+.heroButton input:focus{
+    outline:none;
+    border: 1.5px solid white;
+}
+.heroButton button{
+    font-size: 1.2em;
+    padding: 15px 25px;
+    font-weight: bold;
+    width:40%;
+    background:#E50914;
+    color:white;
+    border:none;
+    border-radius: 5px;
+}
+.hero-content .mt{
+    margin-top: 25px;
+}
+.btnhover:hover{
+    background:#ac1c23;
+    transition: 0.3s;
+}

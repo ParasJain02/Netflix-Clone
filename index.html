@@ -11,8 +11,6 @@
     />
   </head>
   <body>
-
-    
     <section class="hero">
       <div class="herobg">
         <header>
@@ -46,38 +44,103 @@
           <h1>Unlimited movies, shows, and more</h1>
           <p>Starts at ₹149. Cancel at any time.</p>
 
-          <p class="mt">Ready to watch? Enter your email to create or restart your membership.</p>
+          <p class="mt">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
           <form action="#" method="post">
-                    <div class="heroButton">
-
-                    <input type="email" placeholder="Email Address" required >
-                    <button type="submit" class="btn btnhover">Get Started &gt;</button>
-                </div>
-            </form>
+            <div class="heroButton">
+              <input type="email" placeholder="Email Address" required />
+              <button type="submit" class="btn btnhover">
+                Get Started &gt;
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
-
-
-
     <main>
-        <section class="sec1">
-            
-        </section>
+      <section class="sec1">
+        <div class="divider">
+          <div class="line"></div>
+        </div>
+
+        <div class="trending">
+          <h1>Trending Now</h1>
+
+          <button href="#" class="scrollbtn leftbtn" id="leftbtn">&lt;</button>
+          <button href="#" class="scrollbtn rightbtn" id="rightbtn">&gt;</button>
+
+          <div class="trending-movies" id="movieList">
+            <div class="movie-card">
+              <img src="images/movie1.webp" alt="Movie 1" />
+              <h1>1</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie2.webp" alt="Movie 1" />
+              <h1>2</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie3.webp" alt="Movie 1" />
+              <h1>3</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie4.webp" alt="Movie 1" />
+              <h1>4</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie5.webp" alt="Movie 1" />
+              <h1>5</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie6.webp" alt="Movie 1" />
+              <h1>6</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie7.webp" alt="Movie 1" />
+              <h1>7</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie8.webp" alt="Movie 1" />
+              <h1>8</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie9.webp" alt="Movie 1" />
+              <h1>9</h1>
+            </div>
+            <div class="movie-card">
+              <img src="images/movie10.webp" alt="Movie 1" />
+              <h1>10</h1>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        
-    </footer>
-
-
-
+    <footer></footer>
 
     <script>
       function changeLang(language) {
         document.getElementById("lang1").innerText = language;
       }
+
+      document.getElementById("leftbtn").onclick = () => {
+        document
+          .getElementById("movieList")
+          .scrollBy({ left: -1000, behavior: "smooth" });
+                    document.getElementById("rightbtn").style.display = "block";
+                    document.getElementById("leftbtn").style.display = "none";
+
+      };
+
+      document.getElementById("rightbtn").onclick = () => {
+        document
+          .getElementById("movieList")
+          .scrollBy({ left: 1000, behavior: "smooth" });
+          document.getElementById("leftbtn").style.display = "block";
+          document.getElementById("rightbtn").style.display = "none";
+      };
     </script>
   </body>
 </html>

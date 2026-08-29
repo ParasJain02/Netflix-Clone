@@ -70,7 +70,9 @@
           <h1>Trending Now</h1>
 
           <button href="#" class="scrollbtn leftbtn" id="leftbtn">&lt;</button>
-          <button href="#" class="scrollbtn rightbtn" id="rightbtn">&gt;</button>
+          <button href="#" class="scrollbtn rightbtn" id="rightbtn">
+            &gt;
+          </button>
 
           <div class="trending-movies" id="movieList">
             <div class="movie-card">
@@ -117,36 +119,143 @@
         </div>
       </section>
 
-
       <section class="sec2">
         <h1>More reasons to join</h1>
         <div class="reason">
           <div class="reasoncard">
             <h3>Enjoy on your TV</h3>
-            <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            <p>
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </p>
             <div class="reason-icon">
               <img src="images/tv.png" alt="TV Icon" />
             </div>
           </div>
           <div class="reasoncard">
             <h3>Download your shows to watch offline</h3>
-            <p>Save your favourites easily and always have something to watch.</p>
+            <p>
+              Save your favourites easily and always have something to watch.
+            </p>
             <div class="reason-icon">
               <img src="images/tv.png" alt="TV Icon" />
             </div>
           </div>
           <div class="reasoncard">
             <h3>Watch everywhere</h3>
-            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            <p>
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV.
+            </p>
             <div class="reason-icon">
               <img src="images/tv.png" alt="TV Icon" />
             </div>
           </div>
           <div class="reasoncard">
             <h3>Create profiles for kids</h3>
-            <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+            <p>
+              Send kids on adventures with their favourite characters in a space
+              made just for them — free with your membership.
+            </p>
             <div class="reason-icon">
               <img src="images/tv.png" alt="TV Icon" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="questions">
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="que">
+              <h3>Question</h3>
+              <button class="plus">+</button>
+            </div>
+            <div class="ans">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur perspiciatis ea dicta nihil ratione fugit tempore ex
+                eveniet. Optio eligendi rem sunt voluptatum.
+              </p>
             </div>
           </div>
         </div>
@@ -164,18 +273,33 @@
         document
           .getElementById("movieList")
           .scrollBy({ left: -1000, behavior: "smooth" });
-                    document.getElementById("rightbtn").style.display = "block";
-                    document.getElementById("leftbtn").style.display = "none";
-
+        document.getElementById("rightbtn").style.display = "block";
+        document.getElementById("leftbtn").style.display = "none";
       };
 
       document.getElementById("rightbtn").onclick = () => {
         document
           .getElementById("movieList")
           .scrollBy({ left: 1000, behavior: "smooth" });
-          document.getElementById("leftbtn").style.display = "block";
-          document.getElementById("rightbtn").style.display = "none";
+        document.getElementById("leftbtn").style.display = "block";
+        document.getElementById("rightbtn").style.display = "none";
       };
+
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".que");
+
+        question.addEventListener("click", () => {
+          // Optional: Close other open questions
+          faqItems.forEach((otherItem) => {
+            if (otherItem !== item) otherItem.classList.remove("active");
+          });
+
+          // Toggle this question open / closed
+          item.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>
